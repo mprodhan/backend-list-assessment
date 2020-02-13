@@ -26,8 +26,11 @@ Kenzie List1 Assignment
 
 
 def match_ends(words):
-    # your code here
-    return
+    for n in words:
+        if len(n) > 2 and n[0] == n[-1]:
+            return words, n.count(n[0]) 
+        else:
+            return words
 
 
 # B. front_x
@@ -38,8 +41,10 @@ def match_ends(words):
 # Hint: this can be done by making 2 lists and sorting each of them
 # before combining them.
 def front_x(words):
-    # your code here
-    return
+    list = list.sort()
+    list_1 = list[3:]
+    list_2 = list[0:3]
+    return list_1 += list_2
 
 
 # C. sort_last
@@ -49,8 +54,11 @@ def front_x(words):
 # [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
 # Hint: use a custom key= function to extract the last element form each tuple.
 def sort_last(tuples):
-    # your code here
-    return
+    tuples_pop = tuples.pop()
+    tuples_pop_2 = tuples.pop(0)
+    tuples.insert(0, tuples_pop)
+    tuples.append(tuples_pop_2)
+    return tuples
 
 
 # Simple provided test() function used in main() to print
